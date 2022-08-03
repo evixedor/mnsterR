@@ -1,8 +1,14 @@
+import { Monster } from "../../App";
+
 import "./profile.styles.css";
 
-const Profile = ({ monster }) => {
+type CardProps = {
+	monster: Monster;
+};
+
+const Profile = ({ monster }: CardProps) => {
 	const { name, email, id } = monster;
-  
+
 	return (
 		<div className="profile-container" key={id}>
 			<img
